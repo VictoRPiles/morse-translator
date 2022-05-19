@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cc2ad09b-fc6a-426a-b3a8-06cf55dcca19" name="Changes" comment="Guarda el abecedario y el alfabeto morse">
+    <list default="true" id="cc2ad09b-fc6a-426a-b3a8-06cf55dcca19" name="Changes" comment="Espacio antes y después del separador de palabras en código morse">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/MorseDecoder.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/MorseEncoder.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Alphabet.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Alphabet.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +41,7 @@
     "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
     "RunOnceActivity.go.formatter.settings.were.checked": "true",
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "go.import.settings.migrated": "true",
     "settings.editor.selected.configurable": "preferences.pluginManager"
@@ -67,7 +70,7 @@
       <option name="presentableId" value="Default" />
       <updated>1652974438038</updated>
       <workItem from="1652974442819" duration="417000" />
-      <workItem from="1652974873741" duration="5275000" />
+      <workItem from="1652974873741" duration="6319000" />
     </task>
     <task id="LOCAL-00001" summary="Commit inicial">
       <created>1652975214606</created>
@@ -97,7 +100,28 @@
       <option name="project" value="LOCAL" />
       <updated>1652978407512</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Clase MorseDecoder terminada">
+      <created>1652980353861</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1652980353861</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Espacio antes y después del separador de palabras en código morse">
+      <created>1652980971968</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1652980971968</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Espacio antes y después del separador de palabras en código morse">
+      <created>1652981070807</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1652981070807</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,7 +141,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit inicial" />
     <MESSAGE value="Guarda el abecedario y el alfabeto morse" />
-    <option name="LAST_COMMIT_MESSAGE" value="Guarda el abecedario y el alfabeto morse" />
+    <MESSAGE value="Clase MorseDecoder terminada" />
+    <MESSAGE value="Espacio antes y después del separador de palabras en código morse" />
+    <option name="LAST_COMMIT_MESSAGE" value="Espacio antes y después del separador de palabras en código morse" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="VgoProject">
