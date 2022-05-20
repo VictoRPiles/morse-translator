@@ -8,7 +8,7 @@ class MorseEncoder {
 	 * @return Message in [morse code][Alphabet.morseAlphabet].
 	 */
 	fun encode(message: String): String {
-		var newMessage = "";
+		var newMessage = ""
 		/* lookahead Regex, allows to keep the delimiter */
 		val delimiter = Regex("(?<=\\s)|(?=\\s)")
 
