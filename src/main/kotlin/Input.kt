@@ -18,7 +18,7 @@ class Input(args: Array<String>) {
 		flags.addOption("d", "decode", false, "Decode message")
 	}
 
-	/** @return All args concatenated in one String */
+	/** @return All args concatenated in one String and trim trailing whitespaces */
 	fun getMessageFromArgs(): String {
 		var message = ""
 
@@ -26,7 +26,7 @@ class Input(args: Array<String>) {
 			message += "$arg "
 		}
 
-		return message
+		return message.trim()
 	}
 
 	/** @return Not null String with the message. */
