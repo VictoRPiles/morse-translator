@@ -35,6 +35,8 @@ class Input(args: Array<String>) {
 		return readLine() ?: return cliInput()
 	}
 
+	// FIXME: 20/05/2022 Se piensa que las rallas del código morse son flags
+	/** @return The action that the flag should trigger. */
 	fun checkFlags(): String? {
 		if (cli.hasOption("e")) {
 			return "encode"
