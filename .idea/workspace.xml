@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cc2ad09b-fc6a-426a-b3a8-06cf55dcca19" name="Changes" comment="Añadiendo la dependencia apache commons-cli">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Input.kt" afterDir="false" />
+    <list default="true" id="cc2ad09b-fc6a-426a-b3a8-06cf55dcca19" name="Changes" comment="Función main simple para probar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Input.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Input.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +64,7 @@
     <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainKt" />
       <module name="morse-translator" />
-      <option name="PROGRAM_PARAMETERS" value="--encode hola nose xed" />
+      <option name="PROGRAM_PARAMETERS" value="-e nosee" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -88,7 +88,7 @@
       <workItem from="1652974873741" duration="6319000" />
       <workItem from="1653041804463" duration="45000" />
       <workItem from="1653041894829" duration="1576000" />
-      <workItem from="1653043979895" duration="2664000" />
+      <workItem from="1653043979895" duration="3664000" />
     </task>
     <task id="LOCAL-00001" summary="Commit inicial">
       <created>1652975214606</created>
@@ -160,7 +160,21 @@
       <option name="project" value="LOCAL" />
       <updated>1653045732652</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Entrada desde los argumentos, soporta las opciones -e (encode) y -d (decode)">
+      <created>1653046720825</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1653046720825</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Elimina los espacios sobrantes de la entrada">
+      <created>1653047129324</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1653047129324</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,7 +199,10 @@
     <MESSAGE value="Limpiando codigo" />
     <MESSAGE value="Trabajando en los métodos de entrada" />
     <MESSAGE value="Añadiendo la dependencia apache commons-cli" />
-    <option name="LAST_COMMIT_MESSAGE" value="Añadiendo la dependencia apache commons-cli" />
+    <MESSAGE value="Entrada desde los argumentos, soporta las opciones -e (encode) y -d (decode)" />
+    <MESSAGE value="Elimina los espacios sobrantes de la entrada" />
+    <MESSAGE value="Función main simple para probar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Función main simple para probar" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="VgoProject">
