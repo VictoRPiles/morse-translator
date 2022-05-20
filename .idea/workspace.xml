@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cc2ad09b-fc6a-426a-b3a8-06cf55dcca19" name="Changes" comment="Trabajando en los métodos de entrada">
+    <list default="true" id="cc2ad09b-fc6a-426a-b3a8-06cf55dcca19" name="Changes" comment="Añadiendo la dependencia apache commons-cli">
       <change afterPath="$PROJECT_DIR$/src/main/kotlin/Input.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/morse-translator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/morse-translator.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +64,7 @@
     <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainKt" />
       <module name="morse-translator" />
-      <option name="PROGRAM_PARAMETERS" value="-e hola" />
+      <option name="PROGRAM_PARAMETERS" value="--encode hola nose xed" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -90,7 +88,7 @@
       <workItem from="1652974873741" duration="6319000" />
       <workItem from="1653041804463" duration="45000" />
       <workItem from="1653041894829" duration="1576000" />
-      <workItem from="1653043979895" duration="1620000" />
+      <workItem from="1653043979895" duration="2664000" />
     </task>
     <task id="LOCAL-00001" summary="Commit inicial">
       <created>1652975214606</created>
@@ -155,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653043480995</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Añadiendo la dependencia apache commons-cli">
+      <created>1653045732652</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1653045732652</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,7 +184,8 @@
     <MESSAGE value="Espacio antes y después del separador de palabras en código morse" />
     <MESSAGE value="Limpiando codigo" />
     <MESSAGE value="Trabajando en los métodos de entrada" />
-    <option name="LAST_COMMIT_MESSAGE" value="Trabajando en los métodos de entrada" />
+    <MESSAGE value="Añadiendo la dependencia apache commons-cli" />
+    <option name="LAST_COMMIT_MESSAGE" value="Añadiendo la dependencia apache commons-cli" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="VgoProject">
