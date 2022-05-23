@@ -9,7 +9,7 @@ class Input(args: Array<String>) {
 
 	init {
 		setupOptions()
-		cli = parser.parse(flags, args)
+		cli = parser.parse(flags, args, true)
 	}
 
 	/** Determine the flags allowed */
@@ -35,7 +35,6 @@ class Input(args: Array<String>) {
 		return readLine() ?: return cliInput()
 	}
 
-	// FIXME: 20/05/2022 Se piensa que las rallas del código morse son flags
 	/** @return The action that the flag should trigger. */
 	fun checkFlags(): String? {
 		if (cli.hasOption("e")) {
