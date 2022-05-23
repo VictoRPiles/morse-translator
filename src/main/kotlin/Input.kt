@@ -45,4 +45,25 @@ class Input(args: Array<String>) {
 		}
 		return null
 	}
+
+	/**
+	 * Allows to choose between encode or decode.
+	 *
+	 * @return "encode" or "decode"
+	 */
+	fun menu(): String {
+		println("Choose action")
+		println("1) Encode")
+		println("2) Decode")
+		print("> ")
+
+		return when (readLine()) {
+			"1", "encode" -> "encode"
+			"2", "decode" -> "decode"
+			else -> {
+				println("Unknown option")
+				menu()
+			}
+		}
+	}
 }
