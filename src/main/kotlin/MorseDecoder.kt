@@ -35,9 +35,12 @@ class MorseDecoder {
 	private fun replaceWithNaturalLetter(letter: String): String {
 		val alphabet = Alphabet()
 
-		if (!alphabet.morseAlphabet.contains(letter)) {
-			throw IllegalArgumentException("ERROR: Incorrect morse letter: $letter")
+		/* If is not in the morse alphabet and only contains morse characters */
+		if (!alphabet.morseAlphabet.contains(letter) && letter.matches("[.-]+".toRegex())) {
+			throw IllegalArgumentException("ERROR: Invalid morse letter: $letter")
 		}
+
+		if (alphabet.isUnknownLetter(letter)) return letter
 
 		return alphabet.naturalAlphabet[alphabet.morseAlphabet.indexOf(letter)]
 	}
