@@ -6,9 +6,6 @@ fun main(args: Array<String>) {
 	val message: String
 	val newMessage: String?
 
-	println("====================== MORSE TRANSLATOR ======================")
-	println("==== -- --- .-. ... . / - .-. .- -. ... .-.. .- - --- .-. ====")
-
 	if (args.isNotEmpty()) {
 		message = input.getMessageFromArgs()
 		newMessage = when (input.checkFlags()) {
@@ -17,11 +14,14 @@ fun main(args: Array<String>) {
 			else -> "Unknown option flag"
 		}
 	} else {
+		println("====================== MORSE TRANSLATOR ======================")
+		println("==== -- --- .-. ... . / - .-. .- -. ... .-.. .- - --- .-. ====")
+
 		message = input.cliInput()
-		newMessage = when (input.menu()) {
-			"encode" -> "Encoded message -> " + encoder.encode(message)
-			"decode" -> "Decoded message -> " + decoder.decode(message)
-			else -> "Unknown option"
+		newMessage = if (input.isMorseMessage(message)) {
+			"Decoded message -> " + decoder.decode(message)
+		} else {
+			"Encoded message -> " + encoder.encode(message)
 		}
 	}
 	println(newMessage)

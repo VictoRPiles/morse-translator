@@ -47,23 +47,12 @@ class Input(args: Array<String>) {
 	}
 
 	/**
-	 * Allows to choose between encode or decode.
+	 * Searches for alphabetic or numbers in the message.
 	 *
-	 * @return "encode" or "decode"
+	 * @param message
+	 * @return If the message is in morse code.
 	 */
-	fun menu(): String {
-		println("Choose action")
-		println("1) Encode")
-		println("2) Decode")
-		print("> ")
-
-		return when (readLine()) {
-			"1", "encode" -> "encode"
-			"2", "decode" -> "decode"
-			else -> {
-				println("Unknown option")
-				menu()
-			}
-		}
+	fun isMorseMessage(message: String): Boolean {
+		return !message.contains("[a-zA-Z\\d]".toRegex())
 	}
 }
