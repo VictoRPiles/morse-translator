@@ -11,4 +11,12 @@ class Alphabet {
 			"..-", "...-", ".--", "-..-", "-.--", "--..",
 			".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----.", "-----", "/"
 	)
+
+	/**
+	 * @param letter Letter to be searched.
+	 * @return If any alphabet contains the letter.
+	 */
+	fun isUnknownLetter(letter: String): Boolean {
+		return !(naturalAlphabet.contains(letter) || morseAlphabet.contains(letter))
+	}
 }
