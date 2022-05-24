@@ -51,8 +51,10 @@ class Input(args: Array<String>) {
 	 *
 	 * @param message
 	 * @return If the message is in morse code.
+	 * @throws IllegalArgumentException If the message is blank
 	 */
 	fun isMorseMessage(message: String): Boolean {
+		if (message.isBlank()) throw IllegalArgumentException("Empty message")
 		return !message.contains("[a-zA-Z\\d]".toRegex())
 	}
 }

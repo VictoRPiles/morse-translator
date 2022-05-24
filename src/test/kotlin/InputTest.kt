@@ -1,8 +1,5 @@
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
-import kotlin.test.assertFalse
-import kotlin.test.assertNull
-import kotlin.test.assertTrue
+import kotlin.test.*
 
 internal class InputTest {
 
@@ -56,5 +53,11 @@ internal class InputTest {
 		assertTrue(input.isMorseMessage(".- @ .. .- ------"))
 		assertFalse(input.isMorseMessage(".- a .. .- ---"))
 		assertFalse(input.isMorseMessage(".- 1 .. .- ---"))
+		/* Empty message */
+		try {
+			input.isMorseMessage(" ")
+			fail()
+		} catch (_: IllegalArgumentException) {
+		}
 	}
 }
