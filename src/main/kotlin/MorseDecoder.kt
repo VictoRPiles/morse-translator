@@ -24,7 +24,8 @@ class MorseDecoder {
 			}
 		}
 
-		return newMessage
+		/* remove multiple spaces in the string */
+		return newMessage.replace("\\s+".toRegex(), " ")
 	}
 
 	/**

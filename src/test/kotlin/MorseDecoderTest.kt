@@ -11,6 +11,7 @@ internal class MorseDecoderTest {
 		assertEquals("ea", morseDecoder.decode(".   .-"))
 		assertEquals("e a", morseDecoder.decode(". / .-"))
 		assertEquals("e a", morseDecoder.decode("./.-"))
+		assertEquals("e a", morseDecoder.decode(".//.-"))
 		try {
 			morseDecoder.decode("----------")
 			fail()
