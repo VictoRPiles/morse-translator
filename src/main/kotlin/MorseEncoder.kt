@@ -28,7 +28,7 @@ class MorseEncoder {
 			println("WARNING: The message you entered contained dots (.) or dashes (-), these have been highlighted with < >")
 		}
 
-		return newMessage
+		return newMessage.trim()
 	}
 
 	/**
