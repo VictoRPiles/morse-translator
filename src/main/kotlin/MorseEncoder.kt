@@ -13,7 +13,8 @@ class MorseEncoder {
 		/* lookahead Regex, allows to keep the delimiter */
 		val delimiter = Regex("(?<=\\s)|(?=\\s)")
 
-		val words = message.split(delimiter)
+		/* remove multiple spaces in the string and split by words */
+		val words = message.replace("\\s+".toRegex(), " ").split(delimiter)
 		for (word in words) {
 			for (letter in word) {
 				if (letter == '-' || letter == '.') {

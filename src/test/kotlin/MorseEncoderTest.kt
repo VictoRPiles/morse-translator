@@ -11,6 +11,8 @@ internal class MorseEncoderTest {
 		assertEquals(". / .-", morseEncoder.encode("e a"))
 		assertEquals(". / .-", morseEncoder.encode("e a"))
 		assertEquals(". / .-", morseEncoder.encode("e a"))
+		assertEquals(". / .-", morseEncoder.encode("e  a"))
+		assertEquals(". / .- / . / .- / . / .-", morseEncoder.encode("e  a e  a e  a"))
 		assertEquals(". / .- <.>", morseEncoder.encode("e a."))
 		assertEquals(". / .- <->", morseEncoder.encode("e a-"))
 		assertEquals(". / .- <.><->", morseEncoder.encode("e a.-"))
