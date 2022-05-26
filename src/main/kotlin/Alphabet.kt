@@ -22,6 +22,10 @@ class Alphabet {
 		return !(naturalAlphabet.contains(letter) || morseAlphabet.contains(letter))
 	}
 
+	/**
+	 * @param message Input string.
+	 * @return Message without multiple spaces, accentuated or diacritics.
+	 */
 	fun normalize(message: String): String {
 		/* remove multiple spaces */
 		val newMessage: String = message.replace("\\s+".toRegex(), " ")
