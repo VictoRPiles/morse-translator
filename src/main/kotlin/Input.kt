@@ -55,6 +55,6 @@ class Input(args: Array<String>) {
 	 */
 	fun isMorseMessage(message: String): Boolean {
 		if (message.isBlank()) throw IllegalArgumentException("Empty message")
-		return !message.contains("[a-zA-Z\\d]".toRegex())
+		return !Alphabet.normalize(message).contains("[a-zA-Z\\d]".toRegex())
 	}
 }
