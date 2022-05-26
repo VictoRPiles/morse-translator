@@ -49,7 +49,7 @@ class Input(args: Array<String>) {
 	/**
 	 * Searches for alphabetic or numbers in the message.
 	 *
-	 * @param message
+	 * @param message Input message.
 	 * @return If the message is in morse code.
 	 * @throws IllegalArgumentException If the message is blank.
 	 */

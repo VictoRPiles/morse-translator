@@ -9,7 +9,6 @@ class MorseDecoder {
 	 * @return Message in [natural alphabet][Alphabet.naturalAlphabet].
 	 */
 	fun decode(message: String): String {
-		val alphabet = Alphabet()
 		var newMessage = ""
 		/* lookahead Regex, allows to keep the delimiter */
 		val delimiter = Regex("(?<=/)|(?=/)")
@@ -26,7 +25,7 @@ class MorseDecoder {
 		}
 
 		/* remove multiple spaces in the string */
-		return alphabet.normalize(message)
+		return Alphabet.normalize(newMessage)
 	}
 
 	/**
@@ -36,20 +35,18 @@ class MorseDecoder {
 	 * @throws IllegalArgumentException If letter is in the natural alphabet [natural alphabet][Alphabet.naturalAlphabet].
 	 */
 	private fun replaceWithNaturalLetter(letter: String): String {
-		val alphabet = Alphabet()
-
 		/* If is not in the morse alphabet and only contains morse characters */
-		if (!alphabet.morseAlphabet.contains(letter) && letter.matches("[.-]+".toRegex())) {
+		if (!Alphabet.morseAlphabet.contains(letter) && letter.matches("[.-]+".toRegex())) {
 			throw IllegalArgumentException("ERROR: Invalid morse letter: $letter")
 		}
 		/* If is in the natural alphabet */
-		if (alphabet.naturalAlphabet.contains(letter)) {
+		if (Alphabet.naturalAlphabet.contains(letter)) {
 			throw IllegalArgumentException("ERROR: Not a morse letter: $letter")
 		}
 
 		/* For special characters */
-		if (alphabet.isUnknownLetter(letter)) return letter
+		if (Alphabet.isUnknownLetter(letter)) return letter
 
-		return alphabet.naturalAlphabet[alphabet.morseAlphabet.indexOf(letter)]
+		return Alphabet.naturalAlphabet[Alphabet.morseAlphabet.indexOf(letter)]
 	}
 }

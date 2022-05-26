@@ -8,13 +8,12 @@ class MorseEncoder {
 	 * @return Message in [morse code][Alphabet.morseAlphabet].
 	 */
 	fun encode(message: String): String {
-		val alphabet = Alphabet()
 		var callDashDotLetterWarning = false
 		var newMessage = ""
 		/* lookahead Regex, allows to keep the delimiter */
 		val delimiter = Regex("(?<=\\s)|(?=\\s)")
 
-		val normalizedMessage: String = alphabet.normalize(message)
+		val normalizedMessage: String = Alphabet.normalize(message)
 
 		val words = normalizedMessage.split(delimiter)
 		for (word in words) {
@@ -39,13 +38,11 @@ class MorseEncoder {
 	 * @return Equivalent [morse code][Alphabet.morseAlphabet] letter.
 	 */
 	private fun replaceWithMorseLetter(letter: String): String {
-		val alphabet = Alphabet()
-
 		/* So there is no confusion with the characters of the morse code */
 		if (letter == "-" || letter == ".") return "<$letter> "
 
-		if (!alphabet.naturalAlphabet.contains(letter)) return "$letter "
+		if (!Alphabet.naturalAlphabet.contains(letter)) return "$letter "
 
-		return alphabet.morseAlphabet[alphabet.naturalAlphabet.indexOf(letter)] + " "
+		return Alphabet.morseAlphabet[Alphabet.naturalAlphabet.indexOf(letter)] + " "
 	}
 }

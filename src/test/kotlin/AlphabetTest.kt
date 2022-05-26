@@ -6,14 +6,12 @@ internal class AlphabetTest {
 
 	@Test
 	fun isUnknownLetter() {
-		val alphabet = Alphabet()
-
-		assertTrue(alphabet.isUnknownLetter("@"))
-		assertFalse(alphabet.isUnknownLetter("-----"))
-		assertTrue(alphabet.isUnknownLetter("------"))
-		assertFalse(alphabet.isUnknownLetter("a"))
-		assertTrue(alphabet.isUnknownLetter("ab"))
-		assertTrue(alphabet.isUnknownLetter("A"))
-		assertTrue(alphabet.isUnknownLetter(".- .-"))
+		assertTrue(Alphabet.isUnknownLetter("@"))
+		assertFalse(Alphabet.isUnknownLetter("-----"))
+		assertTrue(Alphabet.isUnknownLetter("------"))
+		assertFalse(Alphabet.isUnknownLetter("a"))
+		assertTrue(Alphabet.isUnknownLetter("ab"))
+		assertTrue(Alphabet.isUnknownLetter("A"))
+		assertTrue(Alphabet.isUnknownLetter(".- .-"))
 	}
 }
