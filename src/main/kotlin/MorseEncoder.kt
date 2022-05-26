@@ -40,7 +40,7 @@ class MorseEncoder {
 		val alphabet = Alphabet()
 
 		/* So there is no confusion with the characters of the morse code */
-		if (letter == "-" || letter == ".") return "<$letter>"
+		if (letter == "-" || letter == ".") return "<$letter> "
 
 		if (!alphabet.naturalAlphabet.contains(letter)) return "$letter "
 
