@@ -38,7 +38,7 @@ class MorseEncoder {
 	private fun replaceWithMorseLetter(letter: String): String {
 		val alphabet = Alphabet()
 
-		/* So that there is no confusion with the characters of the morse code */
+		/* So there is no confusion with the characters of the morse code */
 		if (letter == "-" || letter == ".") return "<$letter>"
 
 		if (!alphabet.naturalAlphabet.contains(letter)) return "$letter "
