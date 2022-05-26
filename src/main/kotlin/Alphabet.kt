@@ -1,3 +1,5 @@
+import java.text.Normalizer
+
 class Alphabet {
 	val naturalAlphabet = arrayOf(
 			"a", "b", "c", "d", "e", "f", "g", "h", "i", "j",
@@ -18,5 +20,13 @@ class Alphabet {
 	 */
 	fun isUnknownLetter(letter: String): Boolean {
 		return !(naturalAlphabet.contains(letter) || morseAlphabet.contains(letter))
+	}
+
+	fun normalize(message: String): String {
+		/* remove multiple spaces */
+		val newMessage: String = message.replace("\\s+".toRegex(), " ")
+		/* remove accentuated and diacritics */
+		return Normalizer.normalize(newMessage, Normalizer.Form.NFD)
+				.replace("\\p{Mn}+".toRegex(), "")
 	}
 }
