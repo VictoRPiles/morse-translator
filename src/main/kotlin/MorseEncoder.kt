@@ -8,13 +8,15 @@ class MorseEncoder {
 	 * @return Message in [morse code][Alphabet.morseAlphabet].
 	 */
 	fun encode(message: String): String {
+		val alphabet = Alphabet()
 		var callDashDotLetterWarning = false
 		var newMessage = ""
 		/* lookahead Regex, allows to keep the delimiter */
 		val delimiter = Regex("(?<=\\s)|(?=\\s)")
 
-		/* remove multiple spaces in the string and split by words */
-		val words = message.replace("\\s+".toRegex(), " ").split(delimiter)
+		val normalizedMessage: String = alphabet.normalize(message)
+
+		val words = normalizedMessage.split(delimiter)
 		for (word in words) {
 			for (letter in word) {
 				if (letter == '-' || letter == '.') {

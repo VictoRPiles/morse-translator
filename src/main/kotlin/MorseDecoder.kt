@@ -9,6 +9,7 @@ class MorseDecoder {
 	 * @return Message in [natural alphabet][Alphabet.naturalAlphabet].
 	 */
 	fun decode(message: String): String {
+		val alphabet = Alphabet()
 		var newMessage = ""
 		/* lookahead Regex, allows to keep the delimiter */
 		val delimiter = Regex("(?<=/)|(?=/)")
@@ -25,7 +26,7 @@ class MorseDecoder {
 		}
 
 		/* remove multiple spaces in the string */
-		return newMessage.replace("\\s+".toRegex(), " ")
+		return alphabet.normalize(message)
 	}
 
 	/**
